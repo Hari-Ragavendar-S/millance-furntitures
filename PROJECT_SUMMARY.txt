@@ -1,0 +1,121 @@
+MILLIONAIRE DRAW - PROJECT SUMMARY
+===================================
+
+DEVELOPMENT SERVER: http://localhost:5174/
+
+FEATURES IMPLEMENTED:
+---------------------
+
+1. LANDING PAGE (/)
+   - Premium hero section with gradient backgrounds
+   - Animated statistics display
+   - How it works section (5 steps)
+   - Available plans showcase (Rs 500 & Rs 1000)
+   - Recent winners carousel with auto-rotation
+   - Responsive footer with quick links
+
+2. AUTHENTICATION
+   - User Login (/login)
+   - Franchise Login (/franchise)
+   - Admin Login (/admin)
+   - Registration with 2-step form (/register)
+   - Form validation
+   - Mock authentication system
+
+3. USER DASHBOARD (/dashboard)
+   Mobile-first with bottom navigation:
+   
+   a) HOME TAB
+      - Active plan card with group details
+      - Next draw countdown
+      - Payment status with CTA button
+      - Available plans horizontal scroll
+      - Payment timeline (5 months visible)
+      - Payment modal with confirmation
+
+   b) DRAW TAB
+      - Live draw countdown timer
+      - Prize pool display
+      - 6-digit slot machine animation
+      - Demo spin button
+      - Winner announcement with confetti
+      - Participation statistics
+      - Previous draws history
+
+   c) REWARDS TAB
+      - Investment statistics (3 cards)
+      - Draws entered count
+      - Total winnings display
+      - Participation history with status
+      - Winner information per draw
+      - Motivational messaging
+
+   d) PROFILE TAB
+      - User profile header with avatar
+      - Member statistics
+      - Personal information display
+      - Settings menu (Change Password, Notifications, etc.)
+      - Privacy Policy link
+      - Terms & Conditions link
+      - Logout with center confirmation modal
+
+4. LEGAL PAGES
+   - Privacy Policy (/privacy)
+   - Terms & Conditions (/terms)
+   - Clean, readable layout with back navigation
+
+DESIGN SYSTEM:
+--------------
+- Color Palette: Deep Purple/Royal Blue primary, Gold/Amber accent
+- Typography: Playfair Display (headings), Inter (body), JetBrains Mono (codes)
+- Dark theme with glassmorphism effects
+- Smooth animations and transitions
+- Mobile-first responsive design
+
+KEY ANIMATIONS:
+---------------
+- Slot machine spin (6-digit MLD ID)
+- Countdown timer (days, hours, minutes, seconds)
+- Particle effects on landing page
+- Winner carousel auto-rotation
+- Shimmer effects on premium cards
+- Fade in/slide up transitions
+- Pulse animations on live indicators
+
+MOCK DATA:
+----------
+- User: John Doe (MLD: 123456)
+- Active Plan: Silver (Rs 500/month, Group A1B2)
+- Payment History: 8 months paid, 3 pending
+- Draw History: 3 completed draws
+- Plans: Silver (Rs 500) & Gold (Rs 1000)
+
+TECH STACK:
+-----------
+- React 19.2.8
+- React Router DOM 7+
+- Vite 8.3.0
+- Pure CSS (no Tailwind as requested)
+- Context API for state management
+
+USER CREDENTIALS (DEMO):
+------------------------
+Any username/password combination works for demo
+After login, user is redirected to dashboard
+
+MOBILE OPTIMIZATIONS:
+---------------------
+- Bottom navigation (iOS style)
+- Touch-friendly tap targets (44x44px minimum)
+- Horizontal scroll for cards
+- Swipe gestures ready
+- Safe area insets for notches
+- Optimized animations (60fps target)
+
+NOTES:
+------
+- Passwords stored as plain text (as requested)
+- All data is mock/demo data
+- No backend integration
+- Ready for client review
+- Fully functional frontend demo

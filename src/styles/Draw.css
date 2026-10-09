@@ -1,0 +1,1040 @@
+.draw-tab {
+  padding-bottom: 20px;
+}
+
+.draw-header {
+  background: var(--gradient-navy);
+  padding: 30px 20px;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 4px 20px var(--blue-glow);
+  text-align: center;
+  border-bottom: 3px solid var(--premium-gold);
+}
+
+.page-title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--premium-gold);
+  margin-bottom: 8px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.page-subtitle {
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.draw-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Live Draw Card */
+.live-draw-card {
+  background: var(--neutral-0);
+  border: 2px solid var(--royal-blue);
+  border-radius: 24px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), var(--blue-glow);
+}
+
+.live-draw-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-blue);
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--danger);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.draw-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.prize-pool,
+.draw-date-info {
+  background: var(--bg-darker);
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.prize-label,
+.date-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.prize-amount {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--premium-gold);
+}
+
+.date-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Countdown */
+.countdown-section {
+  margin-bottom: 30px;
+}
+
+.countdown-label {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.time-box {
+  background: var(--deep-navy);
+  border: 2px solid var(--premium-gold);
+  border-radius: 12px;
+  padding: 12px 8px;
+  min-width: 60px;
+  text-align: center;
+  box-shadow: 
+    inset 0 2px 5px rgba(0, 0, 0, 0.5),
+    var(--gold-glow);
+}
+
+.time-value {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--premium-gold);
+  line-height: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  filter: brightness(1.2);
+}
+
+.time-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.time-separator {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--premium-gold);
+}
+
+/* Slot Machine */
+.slot-machine {
+  margin-bottom: 24px;
+  background: var(--midnight-blue);
+  padding: 40px 20px;
+  border-radius: 20px;
+  border: 2px solid var(--royal-blue);
+  position: relative;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.5), var(--blue-glow);
+}
+
+.slot-machine::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(37, 99, 235, 0.05) 10px, rgba(37, 99, 235, 0.05) 20px);
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+.slot-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.slot-reel {
+  width: 55px;
+  height: 85px;
+  background: linear-gradient(180deg, var(--deep-navy) 0%, var(--midnight-blue) 50%, var(--deep-navy) 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    inset 0 2px 10px rgba(0, 0, 0, 0.8),
+    var(--gold-glow),
+    0 4px 15px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  border: 3px solid var(--premium-gold);
+}
+
+.slot-reel::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background: linear-gradient(180deg, rgba(245, 185, 66, 0.05) 0%, transparent 50%, rgba(245, 185, 66, 0.05) 100%);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.slot-reel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(245, 185, 66, 0.1) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.slot-number {
+  font-family: 'Impact', 'Arial Black', var(--font-mono);
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--premium-gold);
+  text-shadow: 
+    0 0 20px var(--premium-gold),
+    0 0 40px var(--light-gold),
+    0 4px 8px rgba(0, 0, 0, 1),
+    2px 2px 0 var(--deep-navy),
+    -2px -2px 0 var(--deep-navy);
+  position: relative;
+  z-index: 2;
+  filter: brightness(1.5) contrast(1.2);
+  -webkit-text-stroke: 2px var(--deep-navy);
+}
+
+.slot-reel.spinning .slot-number {
+  animation: spinNumber 0.08s linear infinite;
+  filter: blur(1px) brightness(1.8) contrast(1.3);
+  text-shadow: 
+    0 0 30px var(--premium-gold),
+    0 0 50px var(--light-gold),
+    0 4px 8px rgba(0, 0, 0, 1);
+}
+
+@keyframes spinNumber {
+  0% { 
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px) scale(0.95);
+    opacity: 0.7;
+  }
+  100% { 
+    transform: translateY(-20px) scale(1);
+    opacity: 0.3;
+  }
+}
+
+.slot-label {
+  text-align: center;
+  font-size: 14px;
+  color: var(--premium-gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* Spin Button */
+.spin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.spin-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Winner Announcement */
+.winner-announcement {
+  background: var(--neutral-0);
+  border: 3px solid var(--premium-gold);
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  margin: 20px 0;
+  animation: fadeInScale 0.5s ease-out;
+  box-shadow: var(--gold-glow-strong);
+}
+
+.confetti-icon {
+  color: var(--premium-gold);
+  margin-bottom: 16px;
+  animation: bounce 1s ease-in-out infinite;
+  filter: drop-shadow(var(--gold-glow));
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.winner-text {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--premium-gold);
+  margin-bottom: 12px;
+}
+
+.winner-id {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.winner-prize {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--premium-gold);
+  font-family: var(--font-display);
+}
+
+/* Participation Info */
+.participation-info {
+  background: var(--bg-darker);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.info-value {
+  font-weight: 700;
+  color: var(--text);
+  font-family: var(--font-mono);
+}
+
+/* History List */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.history-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.history-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.history-month {
+  font-weight: 700;
+  color: var(--text);
+  font-size: 16px;
+}
+
+.history-date {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.history-prize {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.history-winner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.winner-icon-small {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.winner-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.winner-details {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.history-participants {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 28px;
+  }
+  
+  .draw-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .countdown-timer {
+    gap: 4px;
+  }
+  
+  .time-box {
+    min-width: 50px;
+    padding: 10px 6px;
+  }
+  
+  .time-value {
+    font-size: 20px;
+  }
+  
+  .slot-container {
+    gap: 6px;
+    padding: 20px 10px;
+  }
+  
+  .slot-reel {
+    width: 40px;
+    height: 60px;
+  }
+  
+  .slot-number {
+    font-size: 28px;
+  }
+}
+
+/* Additional Draw States Styles */
+
+/* Winner Announcement Card */
+.winner-announcement-card {
+  background: linear-gradient(135deg, #FFF8E7 0%, #FFFFFF 100%);
+  border: 3px solid var(--premium-gold);
+  border-radius: 24px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(245, 185, 66, 0.3);
+  animation: slideInUp 0.6s ease;
+  margin-bottom: 24px;
+}
+
+.confetti-animation {
+  font-size: 64px;
+  animation: bounce 1s ease infinite;
+  margin-bottom: 16px;
+}
+
+.winner-badge {
+  display: inline-block;
+  padding: 8px 24px;
+  background: var(--gradient-gold);
+  color: var(--deep-navy);
+  font-size: 14px;
+  font-weight: 900;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.winner-title {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--deep-navy);
+  margin: 0 0 24px 0;
+}
+
+.winner-details-box {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 24px 0;
+  border: 2px solid var(--premium-gold);
+}
+
+.winner-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.winner-detail-row:last-child {
+  border-bottom: none;
+}
+
+.winner-detail-row.prize-row strong {
+  color: var(--premium-gold);
+  font-size: 24px;
+}
+
+.winner-detail-row.total-row {
+  margin-top: 12px;
+  padding-top: 16px;
+  border-top: 2px solid var(--premium-gold);
+}
+
+.winner-detail-row.total-row strong {
+  color: var(--success-600);
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.winner-status {
+  background: var(--success-50);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.status-item {
+  color: var(--success-700);
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+/* Live Draw Animation */
+.live-draw-card {
+  background: linear-gradient(135deg, var(--deep-navy), var(--midnight-blue));
+  border-radius: 24px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(37, 99, 235, 0.3);
+  margin-bottom: 24px;
+}
+
+.live-draw-card.pulsing {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 10px 40px rgba(37, 99, 235, 0.3);
+  }
+  50% {
+    box-shadow: 0 10px 60px rgba(37, 99, 235, 0.6);
+  }
+}
+
+.live-badge-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: #ff0000;
+  color: white;
+  font-size: 14px;
+  font-weight: 900;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.prize-info-live {
+  margin-bottom: 32px;
+}
+
+.prize-info-live .prize-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.prize-info-live .prize-amount {
+  color: var(--premium-gold);
+  font-size: 36px;
+  font-weight: 900;
+  text-shadow: 0 0 20px rgba(245, 185, 66, 0.5);
+}
+
+.slot-machine-live {
+  margin: 32px 0;
+}
+
+.slot-label-top,
+.slot-label-bottom {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 16px 0;
+}
+
+.spinning-fast {
+  animation: spin-slot 0.1s linear infinite !important;
+}
+
+@keyframes spin-slot {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.live-message {
+  margin-top: 32px;
+}
+
+.loading-dots {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.loading-dots .dot {
+  animation: dot-blink 1.4s infinite;
+}
+
+.loading-dots .dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dots .dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes dot-blink {
+  0%, 20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.eligible-badge {
+  margin-top: 16px;
+  padding: 12px 20px;
+  background: var(--success-100);
+  color: var(--success-700);
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* Just Completed Card */
+.just-completed-card {
+  background: linear-gradient(135deg, #DBEAFE 0%, #FFFFFF 100%);
+  border: 2px solid var(--brand-300);
+  border-radius: 24px;
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.completed-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: var(--brand-600);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 9999px;
+  margin-bottom: 20px;
+}
+
+.completed-info {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.completed-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.completed-row:last-child {
+  border-bottom: none;
+}
+
+.completed-row .prize-value {
+  color: var(--premium-gold);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.your-result {
+  margin-top: 20px;
+}
+
+.result-won {
+  padding: 16px;
+  background: var(--success-50);
+  border: 2px solid var(--success-200);
+  border-radius: 12px;
+  color: var(--success-700);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.result-lost {
+  padding: 16px;
+  background: var(--neutral-100);
+  border: 1px solid var(--neutral-300);
+  border-radius: 12px;
+  color: var(--neutral-700);
+  font-weight: 600;
+}
+
+/* Eligible/Not Eligible Cards */
+.next-draw-card {
+  background: white;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+}
+
+.next-draw-card h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin: 16px 0 20px 0;
+  text-align: center;
+}
+
+.eligible-card {
+  border: 2px solid var(--success-200);
+  background: linear-gradient(135deg, var(--success-50) 0%, white 100%);
+}
+
+.not-eligible-card {
+  border: 2px solid var(--warning-200);
+  background: linear-gradient(135deg, var(--warning-50) 0%, white 100%);
+}
+
+.eligible-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--success-500);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 9999px;
+}
+
+.warning-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--warning-500);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 9999px;
+}
+
+.draw-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.info-box {
+  background: var(--neutral-50);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.info-box .info-label {
+  font-size: 12px;
+  color: var(--neutral-600);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.info-box .info-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--neutral-900);
+}
+
+.info-box .info-value.prize {
+  color: var(--premium-gold);
+  font-size: 24px;
+}
+
+.participation-info {
+  background: var(--neutral-50);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.info-item {
+  padding: 8px 0;
+  color: var(--success-700);
+  font-weight: 600;
+}
+
+.info-row-horizontal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--neutral-200);
+}
+
+.info-col {
+  text-align: center;
+}
+
+.info-label-small {
+  font-size: 12px;
+  color: var(--neutral-600);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.info-value-small {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--neutral-900);
+}
+
+.warning-message {
+  display: flex;
+  gap: 16px;
+  align-items: start;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  border: 2px solid var(--warning-200);
+}
+
+.warning-icon {
+  font-size: 32px;
+}
+
+.warning-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--warning-700);
+  margin-bottom: 4px;
+}
+
+.warning-text {
+  font-size: 14px;
+  color: var(--neutral-700);
+}
+
+/* No Draw Card */
+.no-draw-card {
+  background: var(--neutral-50);
+  border-radius: 24px;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.no-draw-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.no-draw-card h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin: 0 0 12px 0;
+}
+
+.no-draw-card p {
+  color: var(--neutral-600);
+  margin: 8px 0;
+}
+
+.contact-text {
+  font-weight: 600;
+  color: var(--brand-600);
+}
+
+.user-info-box {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 24px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Draw History Updates */
+.history-card.won {
+  border: 2px solid var(--success-200);
+  background: linear-gradient(135deg, var(--success-50) 0%, white 100%);
+}
+
+.history-card.lost {
+  border: 1px solid var(--neutral-200);
+}
+
+.status-badge-history {
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-badge-history.won {
+  background: var(--success-500);
+  color: white;
+}
+
+.status-badge-history.lost {
+  background: var(--neutral-200);
+  color: var(--neutral-600);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .draw-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-row-horizontal {
+    grid-template-columns: 1fr;
+  }
+
+  .winner-title {
+    font-size: 24px;
+  }
+
+  .prize-info-live .prize-amount {
+    font-size: 28px;
+  }
+
+  .slot-container {
+    gap: 4px;
+  }
+
+  .slot-reel {
+    width: 40px;
+    height: 60px;
+  }
+
+  .slot-number {
+    font-size: 32px;
+  }
+}

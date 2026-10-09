@@ -1,0 +1,810 @@
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: var(--gradient-navy);
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-page::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(245, 185, 66, 0.15) 0%, transparent 70%);
+  top: -250px;
+  right: -250px;
+  animation: float 20s ease-in-out infinite;
+}
+
+.auth-page::after {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+  bottom: -250px;
+  left: -250px;
+  animation: float 25s ease-in-out infinite reverse;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: var(--bg-darker);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text);
+}
+
+.back-button:hover {
+  background: var(--surface-light);
+  transform: translateX(-4px);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-top: 20px;
+}
+
+.auth-logo {
+  margin-bottom: 20px;
+}
+
+.auth-logo .logo-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--gradient-gold);
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--deep-navy);
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 900;
+  box-shadow: var(--gold-glow-strong);
+}
+
+.auth-title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 900;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.auth-subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.error-message {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+.form-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -10px;
+}
+
+.link-text {
+  color: var(--premium-gold);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.link-text:hover {
+  color: var(--light-gold);
+}
+
+.form-divider {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.form-divider span {
+  display: block;
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.auth-links {
+  text-align: center;
+  margin-top: 24px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.auth-link-buttons {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: var(--premium-gold);
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.link-button:hover {
+  color: var(--light-gold);
+}
+
+/* Progress Bar */
+.progress-bar {
+  margin-bottom: 40px;
+}
+
+.progress-steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 1;
+}
+
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-darker);
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.progress-step.active .step-circle {
+  background: var(--gradient-gold);
+  border-color: var(--premium-gold);
+  color: var(--deep-navy);
+  box-shadow: var(--gold-glow);
+  font-weight: 900;
+}
+
+.step-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.progress-step.active .step-label {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.progress-line {
+  position: absolute;
+  top: 20px;
+  left: 25%;
+  right: 25%;
+  height: 2px;
+  background: var(--border);
+  z-index: 0;
+}
+
+.form-step {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  cursor: pointer;
+  accent-color: var(--primary);
+}
+
+.checkbox-group label {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.checkbox-group a {
+  color: var(--premium-gold);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.checkbox-group a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .auth-page {
+    padding: 20px;
+  }
+  
+  .auth-card {
+    padding: 30px 24px;
+  }
+  
+  .auth-title {
+    font-size: 28px;
+  }
+  
+  .auth-logo .logo-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+  
+  .step-label {
+    font-size: 10px;
+  }
+}
+
+
+/* ========================================
+   SRIMATHI LOGIN STYLES
+   ======================================== */
+
+.srimathi-login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(20px, 4vw, 40px);
+  transition: background 0.3s ease;
+}
+
+.srimathi-login-container {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  z-index: 1;
+}
+
+.srimathi-login-card {
+  border-radius: 24px;
+  padding: clamp(30px, 5vw, 48px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  position: relative;
+  animation: fadeUp 0.6s ease;
+}
+
+.srimathi-login-card.dark-mode {
+  background: rgba(26, 19, 51, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.srimathi-login-card.light-mode {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Back Button */
+.srimathi-back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.dark-mode .srimathi-back-button {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.light-mode .srimathi-back-button {
+  background: rgba(0, 0, 0, 0.05);
+  color: #1f2937;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.srimathi-back-button:hover {
+  transform: translateX(-4px);
+}
+
+.dark-mode .srimathi-back-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.light-mode .srimathi-back-button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.srimathi-login-header {
+  text-align: center;
+  margin-bottom: clamp(32px, 5vw, 40px);
+  padding-top: 20px;
+}
+
+.srimathi-icon-container {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.srimathi-login-title {
+  font-size: clamp(24px, 5vw, 32px);
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.dark-mode .srimathi-login-title {
+  color: white;
+}
+
+.light-mode .srimathi-login-title {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.srimathi-login-subtitle {
+  font-size: 14px;
+  margin: 0;
+}
+
+.dark-mode .srimathi-login-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.light-mode .srimathi-login-subtitle {
+  color: #6b7280;
+}
+
+/* Form */
+.srimathi-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Error Message */
+.srimathi-error-message {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+  font-size: 14px;
+  animation: shake 0.3s ease;
+}
+
+/* Input Group */
+.srimathi-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.srimathi-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dark-mode .srimathi-label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.light-mode .srimathi-label {
+  color: #374151;
+}
+
+.srimathi-input-wrapper {
+  position: relative;
+}
+
+.srimathi-input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.dark-mode .srimathi-input-icon {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.light-mode .srimathi-input-icon {
+  color: #9ca3af;
+}
+
+.srimathi-input {
+  width: 100%;
+  padding: 14px 16px 14px 48px;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  border: 1px solid;
+}
+
+.dark-mode .srimathi-input {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.light-mode .srimathi-input {
+  background: white;
+  border-color: #d1d5db;
+  color: #1f2937;
+}
+
+.srimathi-input:focus {
+  outline: none;
+  border-color: currentColor;
+}
+
+.dark-mode .srimathi-input:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #8b5cf6;
+}
+
+.light-mode .srimathi-input:focus {
+  border-color: #ec4899;
+}
+
+.srimathi-input::placeholder {
+  color: rgba(156, 163, 175, 0.8);
+}
+
+/* Form Footer */
+.srimathi-form-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -12px;
+}
+
+.srimathi-link {
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .srimathi-link {
+  color: #a78bfa;
+}
+
+.light-mode .srimathi-link {
+  color: #ec4899;
+}
+
+.srimathi-link:hover {
+  text-decoration: underline;
+}
+
+/* Submit Button */
+.srimathi-submit-btn {
+  width: 100%;
+  padding: 14px 24px;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 52px;
+}
+
+.srimathi-submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.srimathi-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.srimathi-spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Divider */
+.srimathi-divider {
+  margin-top: 12px;
+  padding-top: 24px;
+  border-top: 1px solid;
+  text-align: center;
+}
+
+.dark-mode .srimathi-divider {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.light-mode .srimathi-divider {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.srimathi-divider span {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.dark-mode .srimathi-divider span {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.light-mode .srimathi-divider span {
+  color: #6b7280;
+}
+
+.srimathi-secondary-btn {
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 48px;
+}
+
+.dark-mode .srimathi-secondary-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.light-mode .srimathi-secondary-btn {
+  background: white;
+  border: 1px solid #d1d5db;
+  color: #1f2937;
+}
+
+.srimathi-secondary-btn:hover {
+  transform: translateY(-2px);
+}
+
+.dark-mode .srimathi-secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.light-mode .srimathi-secondary-btn:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+/* Credentials Info */
+.srimathi-credentials-info {
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.dark-mode .srimathi-credentials-info {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.light-mode .srimathi-credentials-info {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.credentials-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.dark-mode .credentials-title {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.light-mode .credentials-title {
+  color: #6b7280;
+}
+
+.credentials-value {
+  font-size: 13px;
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  word-break: break-all;
+}
+
+.dark-mode .credentials-value {
+  color: #a78bfa;
+}
+
+.light-mode .credentials-value {
+  color: #ec4899;
+}
+
+/* Alternative Links */
+.srimathi-alt-links {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+}
+
+.dark-mode .srimathi-alt-links {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.light-mode .srimathi-alt-links {
+  color: #6b7280;
+}
+
+.srimathi-link-buttons {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.srimathi-link-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: underline;
+  padding: 4px 8px;
+}
+
+.dark-mode .srimathi-link-btn {
+  color: #a78bfa;
+}
+
+.light-mode .srimathi-link-btn {
+  color: #ec4899;
+}
+
+.srimathi-link-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .srimathi-login-page {
+    padding: 20px;
+  }
+
+  .srimathi-login-card {
+    padding: 30px 24px;
+  }
+
+  .srimathi-icon-container {
+    width: 56px;
+    height: 56px;
+  }
+
+  .srimathi-input {
+    padding: 12px 14px 12px 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .srimathi-link-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .srimathi-link-buttons span {
+    display: none;
+  }
+}

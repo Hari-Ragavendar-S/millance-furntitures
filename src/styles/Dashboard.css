@@ -1,0 +1,19 @@
+.dashboard-page {
+  min-height: 100vh;
+  background: #F6F8FC;
+  padding-bottom: 80px;
+}
+
+.dashboard-content {
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .dashboard-content {
+    max-width: 800px;
+  }
+}

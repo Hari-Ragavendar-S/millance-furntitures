@@ -1,0 +1,220 @@
+.invite-splash {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0B1020 0%, #1a2847 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.invite-container {
+  background: white;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.invite-header {
+  background: linear-gradient(135deg, #2563EB 0%, #1d4ed8 100%);
+  color: white;
+  padding: 40px 30px 30px;
+  text-align: center;
+}
+
+.invite-badge {
+  display: inline-block;
+  background: rgba(245, 185, 66, 0.2);
+  color: #F5B942;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.invite-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.invite-body {
+  padding: 30px;
+}
+
+.invite-group-info {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.invite-group-info h2 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  color: #0B1020;
+}
+
+.invite-subtitle {
+  margin: 0;
+  font-size: 16px;
+  color: #64748b;
+}
+
+.invite-details {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.invite-detail-item {
+  flex: 1;
+  background: #f1f5f9;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.detail-label {
+  display: block;
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 5px;
+}
+
+.detail-value {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2563EB;
+}
+
+.invite-prizes {
+  margin-bottom: 30px;
+}
+
+.invite-prizes h3 {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  color: #0B1020;
+}
+
+.prize-list {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.prize-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.prize-item:last-child {
+  border-bottom: none;
+}
+
+.prize-name {
+  font-size: 14px;
+  color: #475569;
+}
+
+.prize-amount {
+  font-size: 14px;
+  font-weight: 600;
+  color: #F5B942;
+}
+
+.prize-more {
+  text-align: center;
+  padding: 10px 0 0;
+  font-size: 14px;
+  color: #2563EB;
+  font-weight: 500;
+}
+
+.invite-benefits {
+  margin-bottom: 30px;
+}
+
+.invite-benefits h3 {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  color: #0B1020;
+}
+
+.invite-benefits ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.invite-benefits li {
+  padding: 10px 0;
+  font-size: 15px;
+  color: #475569;
+}
+
+.invite-join-btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #2563EB 0%, #1d4ed8 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin-bottom: 15px;
+}
+
+.invite-join-btn:hover {
+  transform: translateY(-2px);
+}
+
+.invite-join-btn:active {
+  transform: translateY(0);
+}
+
+.invite-footer-text {
+  text-align: center;
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.invite-loader {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+}
+
+.invite-error {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.invite-error h2 {
+  color: #ef4444;
+  margin-bottom: 10px;
+}
+
+.invite-error p {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.invite-error button {
+  padding: 12px 30px;
+  background: #2563EB;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

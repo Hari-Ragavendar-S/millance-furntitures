@@ -1,0 +1,239 @@
+/* Import Tailwind CSS - MUST BE FIRST */
+@import './styles/tailwind.css';
+
+/* Import new V2 User Panel styles */
+@import './styles/globals.css';
+@import './styles/user.css';
+@import './styles/animations.css';
+@import './styles/public.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Premium Lucky Draw Theme */
+  --deep-navy: #0B1020;
+  --midnight-blue: #111A33;
+  --royal-blue: #2563EB;
+  --premium-gold: #F5B942;
+  --light-gold: #FFD978;
+  --soft-white: #F6F8FC;
+  --dark-charcoal: #111827;
+  --slate: #64748B;
+  
+  /* Brand Colors mapped to Premium Theme */
+  --brand-50: #EFF6FF;
+  --brand-100: #DBEAFE;
+  --brand-200: #BFDBFE;
+  --brand-300: #93C5FD;
+  --brand-400: #60A5FA;
+  --brand-500: var(--royal-blue);
+  --brand-600: #1D4ED8;
+  --brand-700: #1E40AF;
+  --brand-800: var(--midnight-blue);
+  --brand-900: var(--deep-navy);
+  --brand-950: #050813;
+  
+  /* Accent Colors - Premium Gold */
+  --accent-50: #FEF3C7;
+  --accent-100: #FEF08A;
+  --accent-200: #FDE047;
+  --accent-300: #FACC15;
+  --accent-400: var(--light-gold);
+  --accent-500: var(--premium-gold);
+  --accent-600: #D97706;
+  --accent-700: #B45309;
+  --accent-800: #92400E;
+  --accent-900: #78350F;
+  
+  /* Semantic Colors */
+  --success-50: #f0fdf4;
+  --success-100: #dcfce7;
+  --success-500: #22c55e;
+  --success-600: #16a34a;
+  
+  --warning-50: #fffbeb;
+  --warning-100: #fef3c7;
+  --warning-500: #f59e0b;
+  --warning-600: #d97706;
+  
+  --danger-50: #fff1f2;
+  --danger-100: #ffe4e6;
+  --danger-500: #ef4444;
+  --danger-600: #dc2626;
+  
+  --info-50: #eff6ff;
+  --info-100: #dbeafe;
+  --info-500: #3b82f6;
+  --info-600: #2563eb;
+  
+  /* Neutral Colors */
+  --neutral-0: #ffffff;
+  --neutral-50: var(--soft-white);
+  --neutral-100: #f1f5f9;
+  --neutral-150: #e9eef5;
+  --neutral-200: #e2e8f0;
+  --neutral-300: #cbd5e1;
+  --neutral-400: #94a3b8;
+  --neutral-500: var(--slate);
+  --neutral-600: #475569;
+  --neutral-700: #334155;
+  --neutral-800: #1e293b;
+  --neutral-900: var(--dark-charcoal);
+  
+  /* Premium Gradients */
+  --gradient-navy: linear-gradient(135deg, var(--deep-navy), var(--midnight-blue));
+  --gradient-blue: linear-gradient(135deg, var(--royal-blue), #1D4ED8);
+  --gradient-gold: linear-gradient(135deg, var(--premium-gold), var(--light-gold));
+  --gradient-hero: linear-gradient(135deg, var(--deep-navy) 0%, var(--midnight-blue) 50%, var(--royal-blue) 100%);
+  
+  /* Gold Glow Effects */
+  --gold-glow: 0 0 20px rgba(245, 185, 66, 0.4);
+  --gold-glow-strong: 0 0 30px rgba(245, 185, 66, 0.6);
+  --blue-glow: 0 0 20px rgba(37, 99, 235, 0.3);
+  
+  /* Landing Page Special (kept for compatibility) */
+  --lp-hot: #ff2d8d;
+  --lp-purple: #7c3aed;
+  --lp-cyan: #00c2ff;
+  --lp-lime: #a3e635;
+  --lp-orange: #ff8a00;
+  --lp-yellow: var(--light-gold);
+  
+  --font-display: 'Cinzel', 'Playfair Display', Georgia, serif;
+  --font-body: 'Montserrat', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Courier New', monospace;
+  
+  /* Smooth Easing */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-bounce: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--neutral-50);
+  color: var(--neutral-900);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  background: var(--neutral-50);
+}
+
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Stagger Animations */
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.10s; }
+.stagger-3 { animation-delay: 0.15s; }
+.stagger-4 { animation-delay: 0.20s; }
+.stagger-5 { animation-delay: 0.25s; }
+.stagger-6 { animation-delay: 0.30s; }
+
+.fade-in {
+  animation: fadeIn 0.25s var(--ease-smooth);
+}
+
+.slide-in-right {
+  animation: slideInRight 0.2s var(--ease-smooth);
+}
+
+.scale-in {
+  animation: scaleIn 0.2s var(--ease-spring);
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

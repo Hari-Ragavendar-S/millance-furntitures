@@ -1,0 +1,343 @@
+/* Global Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Button Styles */
+.btn {
+  padding: 12px 32px;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 200ms var(--ease-smooth);
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--gradient-blue);
+  color: white;
+  box-shadow: var(--blue-glow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2), 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-accent {
+  background: var(--gradient-gold);
+  color: var(--deep-navy);
+  font-weight: 700;
+  box-shadow: var(--gold-glow);
+}
+
+.btn-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--gold-glow-strong);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--royal-blue);
+  color: var(--royal-blue);
+  font-weight: 700;
+}
+
+.btn-outline:hover {
+  background: var(--brand-50);
+  border-color: var(--royal-blue);
+  box-shadow: var(--blue-glow);
+}
+
+.btn-secondary {
+  background: var(--neutral-0);
+  color: var(--neutral-900);
+  border: 1px solid var(--neutral-200);
+}
+
+.btn-secondary:hover {
+  background: var(--neutral-50);
+  border-color: var(--neutral-300);
+}
+
+/* Card Styles */
+.card {
+  background: var(--neutral-0);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid var(--neutral-200);
+  transition: all 280ms var(--ease-bounce);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.card-glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.card-premium {
+  background: var(--neutral-0);
+  border: 2px solid var(--royal-blue);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--blue-glow);
+}
+
+.card-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-gold);
+  animation: shimmer 3s linear infinite;
+  background-size: 200% 100%;
+}
+
+/* Input Styles */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--neutral-700);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--neutral-0);
+  border: 1px solid var(--neutral-300);
+  border-radius: 8px;
+  color: var(--neutral-900);
+  font-family: var(--font-body);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--royal-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.input::placeholder {
+  color: var(--neutral-400);
+}
+
+/* Badge Styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+.badge-primary {
+  background: var(--brand-100);
+  color: var(--royal-blue);
+  border: 1px solid var(--brand-200);
+}
+
+.badge-success {
+  background: var(--success-100);
+  color: var(--success-600);
+  border: 1px solid var(--success-500);
+}
+
+.badge-accent {
+  background: var(--accent-100);
+  color: var(--accent-700);
+  border: 1px solid var(--premium-gold);
+}
+
+/* Loading Animation */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-brand {
+  background: var(--gradient-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow Effects */
+.btn-glow {
+  box-shadow: var(--blue-glow);
+}
+
+.glow-brand {
+  box-shadow: var(--blue-glow);
+}
+
+.glow-accent {
+  box-shadow: var(--gold-glow);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .btn {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+  
+  h1 {
+    font-size: 32px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+}
+
+
+/* Enrollment Cards Horizontal Scroll Styling */
+.enrollment-cards-scroll {
+  /* Hide scrollbar on mobile for cleaner look */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: thin;  /* Firefox */
+}
+
+.enrollment-cards-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.enrollment-cards-scroll::-webkit-scrollbar-track {
+  background: #F3F4F6;
+  border-radius: 10px;
+}
+
+.enrollment-cards-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #8B5CF6, #EC4899);
+  border-radius: 10px;
+}
+
+.enrollment-cards-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #7C3AED, #DB2777);
+}
+
+/* Smooth scroll behavior for enrollment cards */
+@media (prefers-reduced-motion: no-preference) {
+  .enrollment-cards-scroll {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Mobile optimization for enrollment cards */
+@media (max-width: 768px) {
+  .enrollment-cards-scroll {
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding: 0 4px;
+  }
+  
+  /* Hide scrollbar on mobile */
+  .enrollment-cards-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .enrollment-cards-scroll {
+    scrollbar-width: none;  /* Firefox */
+  }
+}

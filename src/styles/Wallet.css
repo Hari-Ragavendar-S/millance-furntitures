@@ -1,0 +1,312 @@
+.wallet-tab {
+  padding-bottom: 20px;
+}
+
+.wallet-header {
+  background: var(--gradient-navy);
+  padding: 30px 20px;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 4px 20px var(--blue-glow);
+  text-align: center;
+  border-bottom: 3px solid var(--premium-gold);
+}
+
+.wallet-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Scan & Pay Section */
+.scan-pay-section {
+  background: linear-gradient(135deg, var(--royal-blue) 0%, var(--midnight-blue) 100%);
+  padding: 24px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
+}
+
+.btn-scan-pay {
+  background: linear-gradient(135deg, var(--premium-gold) 0%, #FFD978 100%);
+  color: var(--primary);
+  border: none;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(245, 185, 66, 0.4);
+}
+
+.btn-scan-pay:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 185, 66, 0.6);
+}
+
+.btn-scan-pay:active {
+  transform: translateY(0);
+}
+
+.scan-pay-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+/* Wallet Balance Cards */
+.wallet-balances {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.balance-card {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.balance-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2);
+}
+
+.balance-card.rewards {
+  border-color: var(--premium-gold);
+}
+
+.balance-card.savings {
+  border-color: var(--royal-blue);
+}
+
+.balance-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.balance-card.rewards .balance-icon {
+  background: linear-gradient(135deg, var(--premium-gold) 0%, #FFD978 100%);
+  color: var(--primary);
+}
+
+.balance-card.savings .balance-icon {
+  background: linear-gradient(135deg, var(--royal-blue) 0%, var(--midnight-blue) 100%);
+  color: white;
+}
+
+.balance-info {
+  flex: 1;
+}
+
+.balance-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.balance-amount {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.balance-card.rewards .balance-amount {
+  color: var(--premium-gold);
+}
+
+/* Transactions Section */
+.transactions-section {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid var(--border);
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+/* Transaction Tabs */
+.transaction-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0;
+  overflow-x: auto;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  color: var(--royal-blue);
+}
+
+.tab-btn.active {
+  color: var(--premium-gold);
+  border-bottom-color: var(--premium-gold);
+}
+
+/* Transactions List */
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.transaction-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.transaction-item:hover {
+  border-color: var(--royal-blue);
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.transaction-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--midnight-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--royal-blue);
+  flex-shrink: 0;
+}
+
+.transaction-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.transaction-description {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.transaction-date {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.transaction-amount {
+  font-size: 1.1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.transaction-amount.positive {
+  color: #10b981;
+}
+
+.transaction-amount.negative {
+  color: var(--text-primary);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-secondary);
+}
+
+.empty-state svg {
+  margin-bottom: 16px;
+}
+
+.empty-state p {
+  font-size: 1rem;
+}
+
+/* Loading */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--border);
+  border-top-color: var(--royal-blue);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .wallet-balances {
+    grid-template-columns: 1fr;
+  }
+
+  .balance-amount {
+    font-size: 1.5rem;
+  }
+
+  .btn-scan-pay {
+    padding: 14px 24px;
+    font-size: 1rem;
+  }
+
+  .transaction-tabs {
+    gap: 4px;
+  }
+
+  .tab-btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+}
